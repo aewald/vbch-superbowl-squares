@@ -8,6 +8,7 @@ const GameBoard = () => {
   const [currentUserState, setCurrentUserState] = useState({
     name: 'Test User',
     nickname: 'Player Tester',
+    initals: 'TUE',
     allotments: 3,
     used: 0,
   }); //testing
@@ -31,7 +32,7 @@ const GameBoard = () => {
   const clickHandler = (index) => {
     if (currentUserState.allotments > currentUserState.used) {
       const squares = [...gameBoard.squares];
-      squares[index] = currentUserState.nickname || currentUserState.name;
+      squares[index] = currentUserState.initals;
       setGameBoard({ ...gameBoard, squares });
       setCurrentUserState((prevState) => ({
         ...currentUserState,
