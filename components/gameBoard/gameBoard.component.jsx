@@ -86,7 +86,7 @@ const GameBoard = () => {
     <>
       <h4>Teams</h4>
       {allotments}
-      <TeamLabel>NFC Team</TeamLabel>
+      <TeamLabel vertical={true}>NFC Team</TeamLabel>
       <TeamLabel>AFC Team</TeamLabel>
       <Board
         squares={gameBoard.squares}
