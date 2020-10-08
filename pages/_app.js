@@ -1,7 +1,15 @@
-import '../styles/globals.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'styles/index.scss';
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
-}
+import { Navigation } from 'components/navigation';
+
+const MyApp = ({ Component, pageProps }) => {
+  return (
+    <>
+      <Navigation />
+      <Component {...pageProps} />
+    </>
+  );
+};
 
 export default MyApp
