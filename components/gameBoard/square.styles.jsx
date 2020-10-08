@@ -4,25 +4,26 @@ import styles from 'styles';
 const { xs, sm, md, lg, xl } = styles.breakpoint;
 
 const squareHeaderStyles = css`
-	${xs} {
-		font-size: 5vw;
-	}
-	
-	${sm} {
-		font-size: 1.8em;
-	}
+  background-color: transparent;
+  ${xs} {
+    font-size: 5vw;
+  }
 
-	${md} {
-		font-size: 2.5em;
-	}
+  ${sm} {
+    font-size: 1.8em;
+  }
 
-	${lg} {
-		font-size: 3.4em;
-	}
+  ${md} {
+    font-size: 2.5em;
+  }
 
-	${xl} {
-		font-size: 4em;
-	}
+  ${lg} {
+    font-size: 3.4em;
+  }
+
+  ${xl} {
+    font-size: 4em;
+  }
 `;
 
 const squareButtonsStyles = css`
@@ -48,28 +49,43 @@ const squareButtonsStyles = css`
 		font-size: 2.6em;
 	}
 `
+const selectedColorStyles = css`
+	background-color: green;	
+`;
+
+const getDisabledStyles = ({ selectedColor }) => {
+	if (selectedColor) {
+		return selectedColorStyles;
+	}
+};
 
 const getSquareStyles = ({ as }) => {
 	return as === 'div' ? squareHeaderStyles : squareButtonsStyles;
 };
 
 export const SquareButton = styled.button`
-  background-color: 'gray';
-  border: 2px solid gray;
+  background-color: transparent;
+  border: 2px solid #495057;
   width: 100%;
-	border-radius: 10px;
+  border-radius: 10px;
   padding: 0 0 100%;
-	position: relative;
-	text-align: center;
+  position: relative;
+  text-align: center;
 	${getSquareStyles}
+	
+	&:disabled {
+		background-color: gray;
+		${getDisabledStyles}
+	}
 `;
 
 export const SquareSpace = styled.div`
   position: absolute;
+  background-color: transparent;
   top: 0;
   bottom: 0;
   width: 100%;
-	height: 100%;
-	text-align: center;
+  height: 100%;
+  text-align: center;
   color: white;
 `;

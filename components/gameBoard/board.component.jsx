@@ -13,7 +13,13 @@ const board = ({ clicked, disabled, scores, squares }) => {
     }
 
     squaresArray.push(
-      <Square key={`square${i}`} value={squares[i]} onClick={() => clicked(i)} disabled={disabled || squares[i]} />
+      <Square
+        key={`square${i}`}
+        value={squares[i].value}
+        selectedColor={squares[i].color}
+        onClick={() => clicked(i)}
+        disabled={disabled || squares[i].value}
+      />
     );
   }
 

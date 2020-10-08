@@ -9,6 +9,7 @@ const GameBoard = () => {
     name: 'Test User',
     nickname: 'Player Tester',
     initals: 'TUE',
+    color: 'green',
     allotments: 3,
     used: 0,
   }); //testing
@@ -32,7 +33,7 @@ const GameBoard = () => {
   const clickHandler = (index) => {
     if (currentUserState.allotments > currentUserState.used) {
       const squares = [...gameBoard.squares];
-      squares[index] = currentUserState.initals;
+      squares[index] = { ...squares[index], color: currentUserState.color, value: currentUserState.initals };
       setGameBoard({ ...gameBoard, squares });
       setCurrentUserState((prevState) => ({
         ...currentUserState,
@@ -43,7 +44,13 @@ const GameBoard = () => {
 
   const createNewBoardHandler = () => {
     setScores({ AFC: shuffleDigits(), NFC: shuffleDigits() });
-    setGameBoard({ ...gameBoard, squares: Array(10 * 10).fill(null) });
+    setGameBoard({
+      ...gameBoard,
+      squares: Array(10 * 10).fill({
+        value: null,
+        selectColor: null,
+      }),
+    });
     randomizeHandler();
   };
 
