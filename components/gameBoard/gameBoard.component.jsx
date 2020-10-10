@@ -4,8 +4,6 @@ import Board from './board.component';
 import { TeamLabel } from './gameBoard.styles';
 import { Button, ButtonGroup, Container } from '../UI';
 
-import { Hello } from 'ae-auth';
-
 const GameBoard = () => {
   const [currentUserState, setCurrentUserState] = useState({
     name: 'Test User',
@@ -139,7 +137,6 @@ const GameBoard = () => {
   return (
     <>
       <Container>
-        {Hello}
         {controls}
         {board}
       </Container>

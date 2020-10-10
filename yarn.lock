@@ -1587,10 +1587,6 @@ adjust-sourcemap-loader@2.0.0:
     object-path "0.11.4"
     regex-parser "2.2.10"
 
-ae-auth@aewald/ae-auth:
-  version "1.0.0"
-  resolved "https://codeload.github.com/aewald/ae-auth/tar.gz/7c5561e9791f58130bfae936a734eb37d1503b44"
-
 agent-base@6:
   version "6.0.1"
   resolved "https://registry.yarnpkg.com/agent-base/-/agent-base-6.0.1.tgz#808007e4e5867decb0ab6ab2f928fbdb5a596db4"
