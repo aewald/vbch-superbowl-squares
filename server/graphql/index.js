@@ -5,13 +5,13 @@ const { userMutation, userTypes, userTypeDefs, User } = require('ae-auth');
 
 exports.createApolloServer = () => {
   const typeDefs = gql`
-    ${userTypeDefs}
+    ${userTypes}
 
     type Query {
       signUp: String
     }
 
-    ${userTypes}
+    ${userTypeDefs}
   `;
 
   const resolvers = {
