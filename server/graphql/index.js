@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const { ApolloServer, gql } = require('apollo-server-express');
 
-const { userMutation, userTypes, userTypeDefs, User } = require('ae-auth');
+const { buildAuthContext, userMutation, userTypes, userTypeDefs, User } = require('ae-auth');
 
 exports.createApolloServer = () => {
   const typeDefs = gql`
@@ -24,6 +24,7 @@ exports.createApolloServer = () => {
     typeDefs,
     resolvers,
     context: () => ({
+      ...buildAuthContext(),
       models: {
         User: new User(mongoose.model('User')),
       },
