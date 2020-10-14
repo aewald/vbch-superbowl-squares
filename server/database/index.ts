@@ -1,10 +1,12 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
-require('ae-auth').userSchema(mongoose);
-// require('./models/researchTrees');
-// require('./models/ships');
+import { userSchema } from 'ae-auth';
+// import './models/researchTrees';
+// import './models/ships';
 
-exports.connect = () => {
+userSchema(mongoose);
+
+export const connect = () => {
   mongoose.connect(
     process.env.DB_URI,
     { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false, useCreateIndex: true },

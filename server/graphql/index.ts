@@ -1,9 +1,9 @@
-const mongoose = require('mongoose');
-const { ApolloServer, gql } = require('apollo-server-express');
+import mongoose from 'mongoose';
+import { ApolloServer, gql } from 'apollo-server-express';
 
-const { buildAuthContext, userMutation, userTypes, userTypeDefs, User } = require('ae-auth');
+import { buildAuthContext, userMutation, userTypes, userTypeDefs, User } from 'ae-auth';
 
-exports.createApolloServer = () => {
+export const createApolloServer = () => {
   const typeDefs = gql`
     ${userTypes}
 
