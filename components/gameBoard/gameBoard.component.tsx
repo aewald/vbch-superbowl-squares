@@ -55,11 +55,8 @@ const GameBoard = () => {
   };
 
   const randomizeHandler = () => {
-    setRandomizeScoresState(
-      setInterval(() => {
-        setScores({ AFC: shuffleDigits(), NFC: shuffleDigits() });
-      }, 1000)
-    );
+    const scoresInterval: any = setInterval(() => setScores({ AFC: shuffleDigits(), NFC: shuffleDigits() }), 1000);
+    setRandomizeScoresState(scoresInterval);
   };
 
   const acceptGameBoardHandler = (setScoresOnStart) => {

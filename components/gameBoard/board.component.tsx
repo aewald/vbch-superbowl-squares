@@ -8,8 +8,8 @@ const board = ({ clicked, disabled, scores, squares }) => {
 
   const squaresArray = [];
   for (let i in squares) {
-    if (!(i % 10)) {
-      squaresArray.push(<Square as="div" key={`scoreNFC${i}`} value={nfcScores[Math.floor((i / 10) % 10)]} />);
+    if (!(+i % 10)) {
+      squaresArray.push(<Square as="div" key={`scoreNFC${i}`} value={nfcScores[Math.floor((+i / 10) % 10)]} />);
     }
 
     squaresArray.push(
