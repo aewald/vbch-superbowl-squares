@@ -1600,12 +1600,14 @@ adjust-sourcemap-loader@2.0.0:
     object-path "0.11.4"
     regex-parser "2.2.10"
 
-ae-auth@aewald/ae-auth#cb7e17740bd57039bd0b581b5d880860967d9b69:
+ae-auth@aewald/ae-auth#db59ad05cc30243773141fc1a115dff4a68212d4:
   version "1.0.0"
-  resolved "https://codeload.github.com/aewald/ae-auth/tar.gz/cb7e17740bd57039bd0b581b5d880860967d9b69"
+  resolved "https://codeload.github.com/aewald/ae-auth/tar.gz/db59ad05cc30243773141fc1a115dff4a68212d4"
   dependencies:
     apollo-server-express "^2.18.2"
+    bcryptjs "^2.4.3"
     mongoose "^5.10.9"
+    passport-strategy "^1.0.0"
 
 agent-base@6:
   version "6.0.1"
@@ -2086,6 +2088,11 @@ bcrypt-pbkdf@^1.0.0:
   integrity sha1-pDAdOJtqQ/m2f/PKEaP2Y342Dp4=
   dependencies:
     tweetnacl "^0.14.3"
+
+bcryptjs@^2.4.3:
+  version "2.4.3"
+  resolved "https://registry.yarnpkg.com/bcryptjs/-/bcryptjs-2.4.3.tgz#9ab5627b93e60621ff7cdac5da9733027df1d0cb"
+  integrity sha1-mrVie5PmBiH/fNrF2pczAn3x0Ms=
 
 big.js@^5.2.2:
   version "5.2.2"
@@ -5318,6 +5325,11 @@ pascalcase@^0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/pascalcase/-/pascalcase-0.1.1.tgz#b363e55e8006ca6fe21784d2db22bd15d7917f14"
   integrity sha1-s2PlXoAGym/iF4TS2yK9FdeRfxQ=
+
+passport-strategy@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/passport-strategy/-/passport-strategy-1.0.0.tgz#b5539aa8fc225a3d1ad179476ddf236b440f52e4"
+  integrity sha1-tVOaqPwiWj0a0XlHbd8ja0QPUuQ=
 
 path-browserify@0.0.1:
   version "0.0.1"
