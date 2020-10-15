@@ -1600,7 +1600,7 @@ adjust-sourcemap-loader@2.0.0:
     object-path "0.11.4"
     regex-parser "2.2.10"
 
-ae-auth@aewald/ae-auth#b72edcc5ddc82937ac97c41b0b03a8c3af73a534:
+ae-auth@aewald/ae-auth:
   version "1.0.0"
   resolved "https://codeload.github.com/aewald/ae-auth/tar.gz/b72edcc5ddc82937ac97c41b0b03a8c3af73a534"
   dependencies:
