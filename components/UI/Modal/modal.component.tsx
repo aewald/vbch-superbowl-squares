@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import { ModalUI } from './modal.styles';
 
 import { Backdrop } from 'components/UI';
@@ -6,14 +6,14 @@ import { Backdrop } from 'components/UI';
 // TODO: I need to refactor this...
 
 class Modal extends Component {
-  shouldComponentUpdate(nextProps, nextState) {
-    return nextProps.show !== this.props.show || nextProps.children !== this.props.children;
-  }
+  // shouldComponentUpdate(nextProps, nextState) {
+  //   return nextProps.show !== this.props.show || nextProps.children !== this.props.children;
+  // }
 
   render() {
     return (
       <>
-        <Backdrop show={this.props.show} onClick={this.props.modalClosed} />
+        {/* <Backdrop show={this.props.show} onClick={this.props.modalClosed} />
         <ModalUI
           style={{
             transform: this.props.show ? 'translateY(0)' : 'translateY(-100vh)',
@@ -21,7 +21,7 @@ class Modal extends Component {
           }}
         >
           {this.props.children}
-        </ModalUI>
+        </ModalUI> */}
       </>
     );
   }

@@ -22,8 +22,7 @@
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx",
-    "server/database/index.ss"
+    "**/*.tsx"
   ],
   "exclude": [
     "node_modules"
