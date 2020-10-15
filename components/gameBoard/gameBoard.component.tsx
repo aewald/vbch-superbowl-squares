@@ -19,7 +19,7 @@ const GameBoard = () => {
     active: false,
     randomize: false,
   });
-  const [randomizeScoresState, setRandomizeScoresState] = useState(false);
+  const [randomizeScoresState, setRandomizeScoresState]: any = useState(false);
   const [scores, setScores] = useState({
     AFC: null,
     NFC: null,
