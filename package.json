@@ -15,7 +15,7 @@
   "keywords": [],
   "author": "Andy Ewald",
   "dependencies": {
-    "ae-auth": "aewald/ae-auth#db59ad05cc30243773141fc1a115dff4a68212d4",
+    "ae-auth": "aewald/ae-auth#b72edcc5ddc82937ac97c41b0b03a8c3af73a534",
     "apollo-server-express": "^2.18.2",
     "boostrap": "^2.0.0",
     "bootstrap": "^4.5.2",
