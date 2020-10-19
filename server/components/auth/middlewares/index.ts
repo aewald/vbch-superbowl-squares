@@ -13,7 +13,7 @@ export const initUserAuth = (server: Application) => {
     cookie: { maxAge: 2 * 60 * 60 * 1000 },
     resave: false,
     saveUninitialized: false,
-    store: initSessionStore(),
+    store: initSessionStore()
   };
 
   server.use(session(sess));
