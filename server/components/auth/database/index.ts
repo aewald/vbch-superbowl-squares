@@ -6,7 +6,7 @@ const MongoDBStore = connectMongoDBSession(session);
 export const initSessionStore = () => {
   const store = new MongoDBStore({
     uri: process.env.DB_URI,
-    collection: 'userSessions',
+    collection: 'userSessions'
   });
 
   return store;

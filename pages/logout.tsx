@@ -3,15 +3,15 @@ import { useRouter } from 'next/router';
 import withApollo from 'hoc/withApollo';
 import { useSignOut } from 'apollo/actions/auth';
 
-const Logout = ({apollo}) => {
+const Logout = ({ apollo }) => {
   const [signOut] = useSignOut();
   const router = useRouter();
 
   useEffect(() => {
     signOut().then(() => {
       apollo.resetStore().then(() => router.push('/login'));
-    })
-  }, [])
+    });
+  }, []);
 
   return (
     <>
@@ -24,7 +24,7 @@ const Logout = ({apollo}) => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
 export default withApollo(Logout);
