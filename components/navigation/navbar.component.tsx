@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { NavbarWrapper } from './navbar.styles';
 import { Navbar, Nav } from 'react-bootstrap';
 import Link from 'next/link';
 import withApollo from 'hoc/withApollo';
@@ -31,26 +32,28 @@ const AppNavbar = () => {
     }
   }
 
+  const pageTitle = 'Page Title';
+  const appLinks = [
+    {
+      linkTitle: 'Test Link',
+      path: '/'
+    }
+  ];
+
   return (
-    <div className="navbar-wrapper">
+    <NavbarWrapper>
       <Navbar expand="lg" className="navbar-dark fj-mw9">
-        <Navbar.Brand className="">
-          <AppLink href="/" className="navbar-brand font-weight-bold">
-            AndyEwald
-          </AppLink>
-        </Navbar.Brand>
+        <AppLink className="navbar-brand font-weight-bold" href="/">
+          { pageTitle }
+        </AppLink>
         <Navbar.Toggle />
         <Navbar.Collapse>
           <Nav className="mr-auto">
-            <AppLink href="/portfolios" className="nav-link">
-              Portfolios
-            </AppLink>
-            <AppLink href="/forum/categories" className="nav-link">
-              Forum
-            </AppLink>
-            <AppLink href="/cv" className="nav-link">
-              Cv
-            </AppLink>
+            { appLinks.map(({ linkTitle, path }) => (
+              <AppLink href={path} className="nav-link">
+                { linkTitle }
+              </AppLink>
+            ))}
           </Nav>
 
           {hasResponse && (
@@ -77,7 +80,7 @@ const AppNavbar = () => {
           )}
         </Navbar.Collapse>
       </Navbar>
-    </div>
+    </NavbarWrapper>
   );
 };
 
