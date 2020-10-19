@@ -17,6 +17,26 @@ export const SIGN_OUT = gql`
   }
 `;
 
+export const SIGN_UP = gql`
+  mutation SignUp(
+    $avatar: String
+    $username: String!
+    $email: String!
+    $password: String!
+    $passwordConfirmation: String!
+  ) {
+    signUp(
+      input: {
+        avatar: $avatar
+        username: $username
+        email: $email
+        password: $password
+        passwordConfirmation: $passwordConfirmation
+      }
+    )
+  }
+`;
+
 export const GET_USER = gql`
   query User {
     user {
