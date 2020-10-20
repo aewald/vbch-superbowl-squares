@@ -1,1 +1,1 @@
-export { default } from "./backdrop.component";
+export { default } from './backdrop.component';

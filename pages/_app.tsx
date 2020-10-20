@@ -1,15 +1,15 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'styles/index.scss';
 
-import { Navigation } from 'components/navigation';
+import { Navbar } from 'components/navigation';
 
 const MyApp = ({ Component, pageProps }) => {
   return (
     <>
-      <Navigation />
+      <Navbar />
       <Component {...pageProps} />
     </>
   );
 };
 
-export default MyApp
+export default MyApp;

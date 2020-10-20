@@ -1,10 +1,8 @@
 import mongoose from 'mongoose';
 
-import { userSchema } from 'ae-auth';
+import '../components/auth'; // TODO: need to revisit after conversion to typescript and adding user auth components
 // import './models/researchTrees';
 // import './models/ships';
-
-userSchema(mongoose);
 
 export const connect = () => {
   mongoose.connect(

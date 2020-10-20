@@ -12,40 +12,38 @@ const verticalStyles = css`
   -ms-transform: rotate(-90deg);
   -o-transform: rotate(-90deg);
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
-	
-	${md} {
-		left: -85px;
-		top: 135px;
-	}
+
+  ${md} {
+    left: -85px;
+    top: 135px;
+  }
 `;
 
 const horizontalStyles = css`
-	${xs} {
-		left: 0;
-	}
+  ${xs} {
+    left: 0;
+  }
 
-	${sm} {
-		left: 10px;
-	}
+  ${sm} {
+    left: 10px;
+  }
 
-	${md} {
-		left: -45px;
-	}
+  ${md} {
+    left: -45px;
+  }
 `;
 
 const getTeamStyles = ({ vertical }) => {
-	return vertical ? verticalStyles : horizontalStyles;
+  return vertical ? verticalStyles : horizontalStyles;
 };
 
 export const TeamLabel = styled.label`
   position: relative;
-	top: 12px;
-	left: -40px;
-	${getTeamStyles}
-	
-	
+  top: 12px;
+  left: -40px;
+  ${getTeamStyles}
 
-	${md} {
-		font-size:30px;
-	}
+  ${md} {
+    font-size: 30px;
+  }
 `;
