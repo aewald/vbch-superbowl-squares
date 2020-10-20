@@ -6,7 +6,7 @@ const styles = {
     lg: '@media (min-width: 992px)',
     xl: '@media (min-width: 1200px)',
   },
-  blackNavigation: '#141618',
+  navbar: '#141618',
 };
 
 export default styles;
