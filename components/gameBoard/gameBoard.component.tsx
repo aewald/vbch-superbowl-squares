@@ -11,18 +11,18 @@ const GameBoard = () => {
     initals: 'TUE',
     color: 'green',
     allotments: 3,
-    used: 0,
+    used: 0
   }); //testing
 
   const [gameBoard, setGameBoard] = useState({
     squares: null,
     active: false,
-    randomize: false,
+    randomize: false
   });
   const [randomizeScoresState, setRandomizeScoresState]: any = useState(false);
   const [scores, setScores] = useState({
     AFC: null,
-    NFC: null,
+    NFC: null
   });
 
   const shuffleDigits = () => {
@@ -37,7 +37,7 @@ const GameBoard = () => {
       setGameBoard({ ...gameBoard, squares });
       setCurrentUserState((prevState) => ({
         ...currentUserState,
-        used: prevState.used + 1,
+        used: prevState.used + 1
       }));
     }
   };
@@ -48,8 +48,8 @@ const GameBoard = () => {
       ...gameBoard,
       squares: Array(10 * 10).fill({
         value: null,
-        selectColor: null,
-      }),
+        selectColor: null
+      })
     });
     randomizeHandler();
   };
@@ -67,7 +67,7 @@ const GameBoard = () => {
     setGameBoard((prevState) => ({
       ...prevState,
       active: true,
-      randomize: setScoresOnStart,
+      randomize: setScoresOnStart
     }));
   };
 

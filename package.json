@@ -10,7 +10,8 @@
   },
   "scripts": {
     "dev": "nodemon",
-    "start": "ts-node server/index.ts"
+    "start": "ts-node server/index.ts",
+    "prettier-format": "prettier --config .prettierrc '**/*.ts*' --write"
   },
   "keywords": [],
   "author": "Andy Ewald",

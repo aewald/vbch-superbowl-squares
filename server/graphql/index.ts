@@ -19,8 +19,8 @@ export const createApolloServer = () => {
       ...userQueries
     },
     Mutation: {
-      ...userMutation,
-    },
+      ...userMutation
+    }
   };
 
   const apolloServer = new ApolloServer({
@@ -29,9 +29,9 @@ export const createApolloServer = () => {
     context: ({ req }) => ({
       ...buildAuthContext(req),
       models: {
-        User: new User(mongoose.model('User')),
-      },
-    }),
+        User: new User(mongoose.model('User'))
+      }
+    })
   });
 
   return apolloServer;

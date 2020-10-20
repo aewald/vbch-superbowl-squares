@@ -27,40 +27,40 @@ const squareHeaderStyles = css`
 `;
 
 const squareButtonsStyles = css`
-	line-height: 2.4em;
-	
-	${xs} {
-		font-size: 3.7vw;
-	}
-	
-	${sm} {
-		font-size: 1.2em;
-	}
+  line-height: 2.4em;
 
-	${md} {
-		font-size: 1.6em;
-	}
+  ${xs} {
+    font-size: 3.7vw;
+  }
 
-	${lg} {
-		font-size: 2.1em;
-	}
+  ${sm} {
+    font-size: 1.2em;
+  }
 
-	${xl} {
-		font-size: 2.6em;
-	}
-`
+  ${md} {
+    font-size: 1.6em;
+  }
+
+  ${lg} {
+    font-size: 2.1em;
+  }
+
+  ${xl} {
+    font-size: 2.6em;
+  }
+`;
 const selectedColorStyles = css`
-	background-color: green;	
+  background-color: green;
 `;
 
 const getDisabledStyles = ({ selectedColor }) => {
-	if (selectedColor) {
-		return selectedColorStyles;
-	}
+  if (selectedColor) {
+    return selectedColorStyles;
+  }
 };
 
 const getSquareStyles = ({ as }) => {
-	return as === 'div' ? squareHeaderStyles : squareButtonsStyles;
+  return as === 'div' ? squareHeaderStyles : squareButtonsStyles;
 };
 
 export const SquareButton = styled.button`
@@ -71,12 +71,12 @@ export const SquareButton = styled.button`
   padding: 0 0 100%;
   position: relative;
   text-align: center;
-	${getSquareStyles}
-	
-	&:disabled {
-		background-color: gray;
-		${getDisabledStyles}
-	}
+  ${getSquareStyles}
+
+  &:disabled {
+    background-color: gray;
+    ${getDisabledStyles}
+  }
 `;
 
 export const SquareSpace = styled.div`
