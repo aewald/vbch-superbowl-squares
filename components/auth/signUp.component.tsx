@@ -1,4 +1,5 @@
 import { useForm } from 'react-hook-form';
+import { Button } from 'react-bootstrap';
 
 const RegisterForm = ({ onSubmit }) => {
   const { register, handleSubmit } = useForm();
@@ -31,9 +32,9 @@ const RegisterForm = ({ onSubmit }) => {
           id="passwordConfirmation"
         />
       </div>
-      <button type="submit" className="btn btn-main bg-blue py-2 ttu">
+      <Button type="submit" variant="primary">
         Submit
-      </button>
+      </Button>
     </form>
   );
 };
