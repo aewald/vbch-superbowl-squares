@@ -10,7 +10,8 @@
   },
   "scripts": {
     "dev": "nodemon",
-    "start": "ts-node server/index.ts",
+    "build": "next build",
+    "start": "next start",
     "prettier-format": "prettier --config .prettierrc '**/*.ts*' --write"
   },
   "keywords": [],
