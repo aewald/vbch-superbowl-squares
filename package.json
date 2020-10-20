@@ -10,7 +10,9 @@
   },
   "scripts": {
     "dev": "nodemon",
-    "start": "ts-node server/index.ts",
+    "build": "next build",
+    "heroku-postbuild": "yarn build",
+    "start": "next start",
     "prettier-format": "prettier --config .prettierrc '**/*.ts*' --write"
   },
   "keywords": [],
