@@ -5,6 +5,8 @@ import Link from 'next/link';
 import withApollo from 'hoc/withApollo';
 import { useLazyGetUser } from 'apollo/actions/auth';
 
+import { pageTitle, appLinks } from 'config/navbar.json';
+
 const AppLink = ({ children, className, href }) => (
   <Link href={href}>
     <a className={`mr-3 ${className}`}>{children}</a>
@@ -32,17 +34,9 @@ const AppNavbar = () => {
     }
   }
 
-  const pageTitle = 'Page Title';
-  const appLinks = [
-    {
-      linkTitle: 'Test Link',
-      path: '/'
-    }
-  ];
-
   return (
     <NavbarWrapper>
-      <Navbar expand="lg" className="navbar-dark fj-mw9">
+      <Navbar expand="lg" className="navbar-dark">
         <AppLink className="navbar-brand font-weight-bold" href="/">
           {pageTitle}
         </AppLink>
