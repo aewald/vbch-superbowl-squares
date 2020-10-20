@@ -2,6 +2,7 @@ import express from 'express';
 import next from 'next';
 import { createApolloServer } from './graphql';
 import { connect } from './database';
+import { initUserAuth } from './components/auth';
 
 const port = parseInt(process.env.PORT, 10) || 3000;
 const dev = process.env.NODE_ENV !== 'production';
@@ -12,6 +13,8 @@ connect();
 
 app.prepare().then(() => {
   const server = express();
+
+  initUserAuth(server);
 
   const apolloServer = createApolloServer();
   apolloServer.applyMiddleware({ app: server });
