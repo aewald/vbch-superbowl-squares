@@ -49,8 +49,8 @@ const AppNavbar = () => {
         <Navbar.Toggle />
         <Navbar.Collapse>
           <Nav className="mr-auto">
-            {appLinks.map(({ linkTitle, path }) => (
-              <AppLink href={path} className="nav-link">
+            {appLinks.map(({ linkTitle, path }, index) => (
+              <AppLink key={index} href={path} className="nav-link">
                 {linkTitle}
               </AppLink>
             ))}
