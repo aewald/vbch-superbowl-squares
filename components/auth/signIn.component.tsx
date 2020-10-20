@@ -1,4 +1,5 @@
 import { useForm } from 'react-hook-form';
+import { Button } from 'react-bootstrap';
 
 const SignIn = ({ onSubmit, loading }) => {
   const { handleSubmit, register } = useForm();
@@ -16,9 +17,9 @@ const SignIn = ({ onSubmit, loading }) => {
       {loading && 'Signing in...'}
 
       {!loading && (
-        <button type="submit" className="btn btn-main bg-blue py-2 ttu">
+        <Button type="submit" variant="primary">
           Submit
-        </button>
+        </Button>
       )}
     </form>
   );
