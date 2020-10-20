@@ -26,7 +26,6 @@ export const initPassport = () => {
 
         // TODO: Check user password if its maching password from options
         user.validatePassword(password, (error, isMatching) => {
-          console.log('password', password, error, isMatching);
           if (error) {
             return done(error);
           }

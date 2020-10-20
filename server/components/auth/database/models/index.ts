@@ -57,10 +57,7 @@ export const userSchema = () => {
   });
 
   schema.methods.validatePassword = function (candidatePassword, done) {
-    console.log('validate', candidatePassword, this.password);
-
     bcrypt.compare(candidatePassword, this.password, function (error, isSuccess) {
-      console.log('isSuccess', isSuccess);
       if (error) {
         return done(error);
       }
