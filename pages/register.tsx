@@ -1,5 +1,5 @@
 import { SignUp } from 'components/auth';
-import { Mutation } from 'react-apollo';
+import { Mutation } from '@apollo/react-components';
 import { SIGN_UP } from 'apollo/queries/auth';
 import withApollo from 'hoc/withApollo';
 import { Redirect } from 'components/navigation';
