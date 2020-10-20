@@ -1,0 +1,9 @@
+{
+  "pageTitle": "Page Title",
+  "appLinks": [
+    {
+      "linkTitle": "Test Link",
+      "path": "/"
+    }
+  ]
+}
