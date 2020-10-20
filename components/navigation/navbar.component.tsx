@@ -44,14 +44,14 @@ const AppNavbar = () => {
     <NavbarWrapper>
       <Navbar expand="lg" className="navbar-dark fj-mw9">
         <AppLink className="navbar-brand font-weight-bold" href="/">
-          { pageTitle }
+          {pageTitle}
         </AppLink>
         <Navbar.Toggle />
         <Navbar.Collapse>
           <Nav className="mr-auto">
-            { appLinks.map(({ linkTitle, path }) => (
+            {appLinks.map(({ linkTitle, path }) => (
               <AppLink href={path} className="nav-link">
-                { linkTitle }
+                {linkTitle}
               </AppLink>
             ))}
           </Nav>
